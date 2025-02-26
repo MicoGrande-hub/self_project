@@ -5,17 +5,18 @@
  box-sizing: bordder-box;
  }
 
-body
-{
- min-height: 100vh;
- background: #0c192c;
-  display: flex;
- justify-content: center;
- align-items: center;
- overflow: hidden;
- position: relative;
- }
+
  
+ body {
+    min-height: 100vh;
+	background: #0c192c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    overflow-y: auto; /* Allows vertical scrolling */
+    position: relative;
+}
  
  .center{
 	text-align: center;
@@ -36,7 +37,7 @@ body
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centering trick */
-    font-size: 12px; /* Adjust for better readability */
+    font-size: 15px; /* Adjust for better readability */
     z-index: 10;
     text-align: center; /* Ensures text is centered */
     color: white; /* Adjust text color for contrast */
@@ -68,106 +69,7 @@ body
     border: 3px solid white; /* Optional border */
 }
  
-.Box {
-    width: 43%;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-	text-align: center;
-	font-size: 20px;
-	z-index: 10; 
-	margin-top: -300px; 
-	cursor: pointer;
-	
-}
 
-.Box:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s ease;
-}
-
-.Box2 {
-    width: 43%;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute; 
-	text-align: center;
-	font-size: 20px;
-	z-index: 10; 
-	margin-top: -100px; 
-	cursor: pointer;
-	
-}
-
-.Box2:hover {
-    transform: scale(1.02); 
-    transition: transform 0.3s ease;
-
-}
-
-.Box3 {
-    width: 43%;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute; 
-	text-align: center;
-	font-size: 20px;
-	z-index: 10; 
-	margin-top: 100px; 
-	cursor: pointer;
-	
-}
-
-.Box3:hover {
-    transform: scale(1.02); 
-    transition: transform 0.3s ease;
-
-}
-
-.Box4 {
-    width: 43%;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    text-align: center;
-    font-size: 20px;
-    z-index: 10;
-    margin-top: 300px;
-    cursor: pointer;
-}
-
-    .Box4:hover {
-        transform: scale(1.02);
-        transition: transform 0.3s ease;
-    }
-
-h3 {
-    font-size: 30px;
-}
-
-a {
-    text-decoration: none;
-    color: #D18282;
-    display: inline-block;
-    margin-top: 10px;
-	font-size: 25px;
-}
-
-    a:hover {
-        color: #D18282;
-    }
 
 
 
