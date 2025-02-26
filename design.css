@@ -150,3 +150,36 @@ align-items: flex-start;
     }
 }				
 
+@media (max-width: 768px) { 
+    .header {
+        width: 90%;  /* Make it wider on small screens */
+        font-size: 14px;  /* Increase readability */
+        padding: 15px;
+    }
+
+    .image-container img {
+        width: 120px; /* Resize images */
+        height: 120px;
+    }
+
+    .bubbles span {
+        width: 20px; /* Smaller hearts */
+        height: 20px;
+    }
+
+    p {
+        font-size: 14px; /* Make text easier to read */
+    }
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;  /* Prevents sideways scrolling */
+}
+
+@media (max-width: 480px) { 
+    .bubbles span {
+        width: 15px;
+        height: 15px;
+    }
+}
