@@ -1,10 +1,250 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-	background-image: url("BG.jpg");
-	background-size: cover; 
-    background-repeat: no-repeat;  
-	height: 100vh;
-    margin: 0;
-    padding: 130px;
+*
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: bordder-box;
+ }
+
+body
+{
+ min-height: 100vh;
+ background: #0c192c;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ overflow: hidden;
+ position: relative;
+ }
+ 
+ 
+ .center{
+	text-align: center;
+	position: center;
 }
+
+
+ 
+ .header {
+	width: 50%; /* Adjusted width for better balance */
+    margin: auto;
+    background: rgba(255, 255, 255, 0.15); /* More transparency */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Soft glow */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering trick */
+    font-size: 12px; /* Adjust for better readability */
+    z-index: 10;
+    text-align: center; /* Ensures text is centered */
+    color: white; /* Adjust text color for contrast */
+    font-family: 'Dancing Script', cursive; /* Romantic font */
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+
+/* 🔹 Optional: Soft Text Glow */
+.header p {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+ 
+ 
+ 
+ .image-container {
+    text-align: center; /* Centers the image */
+    margin: 20px 0; /* Adds space above and below the image */
+}
+
+.image-container img {
+    width: 150px; /* Adjust the size */
+    height: 150px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures the image fits well */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Optional glow effect */
+    border: 3px solid white; /* Optional border */
+}
+ 
+.Box {
+    width: 43%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+	text-align: center;
+	font-size: 20px;
+	z-index: 10; 
+	margin-top: -300px; 
+	cursor: pointer;
+	
+}
+
+.Box:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+.Box2 {
+    width: 43%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute; 
+	text-align: center;
+	font-size: 20px;
+	z-index: 10; 
+	margin-top: -100px; 
+	cursor: pointer;
+	
+}
+
+.Box2:hover {
+    transform: scale(1.02); 
+    transition: transform 0.3s ease;
+
+}
+
+.Box3 {
+    width: 43%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute; 
+	text-align: center;
+	font-size: 20px;
+	z-index: 10; 
+	margin-top: 100px; 
+	cursor: pointer;
+	
+}
+
+.Box3:hover {
+    transform: scale(1.02); 
+    transition: transform 0.3s ease;
+
+}
+
+.Box4 {
+    width: 43%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    z-index: 10;
+    margin-top: 300px;
+    cursor: pointer;
+}
+
+    .Box4:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+    }
+
+h3 {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #D18282;
+    display: inline-block;
+    margin-top: 10px;
+	font-size: 25px;
+}
+
+    a:hover {
+        color: #D18282;
+    }
+
+
+
+
+
+
+
+
+.container
+{
+ position: relative;
+ width: 100%;
+ height: 100vh;
+ overflow: hidden;
+ z-index: -1;
+ }
+   
+.bubbles
+{
+ z-index: -100;
+ position: absolute;
+ display: flex;
+ flex-wrap: wrap;
+align-items: flex-start;
+ }
+ 
+.bubbles span {
+    z-index: -100;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: red; /* Heart color */
+    margin: 0 4px;
+    display: inline-block;
+    transform: rotate(-45deg);
+    position: relative;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(80s / var(--i));
+}
+
+.bubbles span::before,
+.bubbles span::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 50%;
+}
+
+.bubbles span::before {
+    top: -15px;
+    left: 0;
+}
+
+.bubbles span::after {
+    top: 0;
+    left: 15px;
+}
+
+.bubbles span:nth-child(even) {
+    background: pink;
+}
+
+.bubbles span:nth-child(even)::before,
+.bubbles span:nth-child(even)::after {
+    background: pink;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0.5) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.2) rotate(-45deg);
+        opacity: 0;
+    }
+}				
+
